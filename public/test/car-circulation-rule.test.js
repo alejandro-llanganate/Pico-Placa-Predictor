@@ -16,7 +16,7 @@ describe('CarCirculationRule', () => {
                     finalHour: time_1.default("18:45"),
                 }
             ],
-            lastDigitPlate: 9
+            lastDigitsLicensePlate: [9]
         };
         chai_1.expect(rule).not.equal(null);
     });
@@ -30,7 +30,7 @@ describe('CarCirculationRule', () => {
                         finalHour: time_1.default("25:45"),
                     }
                 ],
-                lastDigitPlate: 9
+                lastDigitsLicensePlate: [9]
             };
             return rule;
         }, Error);

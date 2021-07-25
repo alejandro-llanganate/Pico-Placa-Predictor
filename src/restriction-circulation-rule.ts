@@ -5,10 +5,10 @@ type hourRestriction = {
     finalHour: string
 }
 
-interface CarCirculationRule {
+interface RestrictionCirculationRule {
     day: weekDay,
     hours: hourRestriction[],
-    lastDigitPlate: number
+    lastDigitsLicensePlate: number[]
 }
 
-export default CarCirculationRule;
+export default RestrictionCirculationRule;
