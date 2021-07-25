@@ -1,4 +1,4 @@
-import weekDay from "./resources/days.js";
+import weekDay from "./resources/days";
 
 type hourRestriction = {
     initialHour: string,

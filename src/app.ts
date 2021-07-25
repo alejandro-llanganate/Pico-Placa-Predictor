@@ -1,9 +1,9 @@
-import LicensePlate from "./license-plate.js";
-import PicoPlacaPredictor from "./pico-placa-predictor.js";
-import picoYPlacaRules from "./resources/rules.js";
+import LicensePlate from "./license-plate";
+import PicoPlacaPredictor from "./pico-placa-predictor";
+import picoYPlacaRules from "./resources/rules";
 
+// For the javascript app.js
 let formPicoPlaca = document.getElementById("formPicoPlaca");
-
 
 if(formPicoPlaca){
     formPicoPlaca.onsubmit = (event) => {

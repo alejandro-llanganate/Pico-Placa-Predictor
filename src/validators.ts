@@ -1,7 +1,8 @@
-import provincesLetters from "./resources/provinces.js";
+import provincesLetters from "./resources/provinces";
 
 class Validators{
 
+    // validates: ABC-1234 or ABC-123
     static validateEcuadorianLicensePlate(plateNumber: string) : boolean{
         const regexFormat : RegExp = /^[A-Z]{3,3}\-[0-9]{3,4}$/;
         const validFormat = regexFormat.exec(plateNumber);
@@ -16,6 +17,7 @@ class Validators{
         return true;
     }
 
+     // validates HH:MM
     static validateTime(time: string){
         const regexFormat : RegExp = /^[0-2]{1}?[0-9]{1}:[0-9]{1,2}?$/;
         const validFormat = regexFormat.exec(time);
@@ -27,7 +29,6 @@ class Validators{
             return false;
         }
         return true;
-
     }
 }
 

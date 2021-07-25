@@ -24,6 +24,5 @@ const provincesLetters = {
     Z: "Zamora Chinchipe",
     Y: "Santa Elena",
     J: "Santo Domingo de los Tsáchilas",
-}
-
+};
 export default provincesLetters;

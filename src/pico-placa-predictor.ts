@@ -1,6 +1,5 @@
-import RestrictionCirculationRule from "./restriction-circulation-rule.js";
-import LicensePlate from "./license-plate.js";
-import { Console } from "console";
+import RestrictionCirculationRule from "./restriction-circulation-rule";
+import LicensePlate from "./license-plate";
 
 class PicoPlacaPredictor {
     private _licensePlate: LicensePlate;
@@ -11,9 +10,9 @@ class PicoPlacaPredictor {
         this._rules = restrictions;
     }
 
+    // this function only return true if the license plate is not restricted
     isAuthorizedToCirculate(date: Date, hour: string): boolean {
         const dayNumber = date.getDay() + 1;
-        console.log("dayNumber", dayNumber)
         let resultRule = this._rules.find(restriction =>
             restriction.day === dayNumber
         )
@@ -33,8 +32,9 @@ class PicoPlacaPredictor {
         return false;
     }
 
+    // this function return true only if the input hour is between an interval of time of a restriction
     private isHourBetweenPeriods(initialHour: string, finalHour: string, userHour: string): boolean {
-        const dateReference = '01/01/2007 ';
+        const dateReference = '01/01/2007 '; // it can be any date
         const initialDateReference = new Date(dateReference + initialHour);
         const finalDateReference = new Date(dateReference + finalHour);
         const userDateReference = new Date(dateReference + userHour);
