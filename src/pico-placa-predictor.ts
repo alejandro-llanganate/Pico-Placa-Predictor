@@ -1,6 +1,6 @@
-import RestrictionCirculationRule from "./restriction-circulation-rule";
-import LicensePlate from "./license-plate";
-import picoYPlacaRules from "./resources/rules";
+import RestrictionCirculationRule from "./restriction-circulation-rule.js";
+import LicensePlate from "./license-plate.js";
+import { Console } from "console";
 
 class PicoPlacaPredictor {
     private _licensePlate: LicensePlate;
@@ -14,18 +14,22 @@ class PicoPlacaPredictor {
     isAuthorizedToCirculate(date: Date, hour: string): boolean {
         const dayNumber = date.getDay() + 1;
         console.log("dayNumber", dayNumber)
-        let resultRule = this._rules.find(restriction => restriction.day === dayNumber)
+        let resultRule = this._rules.find(restriction =>
+            restriction.day === dayNumber
+        )
         if (!resultRule) {
             return true;
         }
-        let resultPlateDigit = resultRule.lastDigitsLicensePlate.find(digit => digit === this._licensePlate.lastDigit);
-        if (!resultPlateDigit) {
+        let resultPlateDigit = resultRule.lastDigitsLicensePlate.find(digit =>
+            digit === this._licensePlate.lastDigit
+        );
+        if (!resultPlateDigit && resultPlateDigit !== 0) {
             return true;
         }
         let resultHourInterval = resultRule.hours.find(hourInterval => this.isHourBetweenPeriods(hourInterval.initialHour, hourInterval.finalHour, hour))
-        if (!resultHourInterval) {
-            return true;
-        }
+            if (!resultHourInterval) {
+                return true;
+            }
         return false;
     }
 

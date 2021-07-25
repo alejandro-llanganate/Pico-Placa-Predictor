@@ -1,6 +1,6 @@
-import RestrictionCirculationRule from "../restriction-circulation-rule";
-import weekDay from "./days";
-import validateHour from "./time";
+import RestrictionCirculationRule from "../restriction-circulation-rule.js";
+import weekDay from "./days.js";
+import validateHour from "./time.js";
 
 const intervals = {
     moorning: {
@@ -18,7 +18,7 @@ const digitsPlates = {
     tuesday: [3,4],
     wednesday: [5,6],
     thursday: [7,8],
-    friday: [9,0]
+    friday: [0, 9]
 }
 
 let picoYPlacaRules: RestrictionCirculationRule[] = [

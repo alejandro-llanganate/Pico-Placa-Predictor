@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const provincesLetters = {
     A: "Azuay",
     B: "Bolívar",
@@ -26,4 +24,4 @@ const provincesLetters = {
     Y: "Santa Elena",
     J: "Santo Domingo de los Tsáchilas",
 };
-exports.default = provincesLetters;
+export default provincesLetters;

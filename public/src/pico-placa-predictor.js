@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class PicoPlacaPredictor {
     constructor(licensePlate, restrictions) {
         this._licensePlate = licensePlate;
@@ -13,7 +11,7 @@ class PicoPlacaPredictor {
             return true;
         }
         let resultPlateDigit = resultRule.lastDigitsLicensePlate.find(digit => digit === this._licensePlate.lastDigit);
-        if (!resultPlateDigit) {
+        if (!resultPlateDigit && resultPlateDigit !== 0) {
             return true;
         }
         let resultHourInterval = resultRule.hours.find(hourInterval => this.isHourBetweenPeriods(hourInterval.initialHour, hourInterval.finalHour, hour));
@@ -33,4 +31,4 @@ class PicoPlacaPredictor {
         this._rules.push(rule);
     }
 }
-exports.default = PicoPlacaPredictor;
+export default PicoPlacaPredictor;

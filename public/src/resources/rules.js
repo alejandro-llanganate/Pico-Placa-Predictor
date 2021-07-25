@@ -1,18 +1,13 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const days_1 = __importDefault(require("./days"));
-const time_1 = __importDefault(require("./time"));
+import weekDay from "./days.js";
+import validateHour from "./time.js";
 const intervals = {
     moorning: {
-        initialHour: time_1.default("07:00"),
-        finalHour: time_1.default("09:30")
+        initialHour: validateHour("07:00"),
+        finalHour: validateHour("09:30")
     },
     afternoon: {
-        initialHour: time_1.default("16:00"),
-        finalHour: time_1.default("19:30")
+        initialHour: validateHour("16:00"),
+        finalHour: validateHour("19:30")
     }
 };
 const digitsPlates = {
@@ -20,11 +15,11 @@ const digitsPlates = {
     tuesday: [3, 4],
     wednesday: [5, 6],
     thursday: [7, 8],
-    friday: [9, 0]
+    friday: [0, 9]
 };
 let picoYPlacaRules = [
     {
-        day: days_1.default.MONDAY,
+        day: weekDay.MONDAY,
         hours: [
             intervals.moorning,
             intervals.afternoon
@@ -32,7 +27,7 @@ let picoYPlacaRules = [
         lastDigitsLicensePlate: digitsPlates.monday
     },
     {
-        day: days_1.default.TUESDAY,
+        day: weekDay.TUESDAY,
         hours: [
             intervals.moorning,
             intervals.afternoon
@@ -40,7 +35,7 @@ let picoYPlacaRules = [
         lastDigitsLicensePlate: digitsPlates.tuesday
     },
     {
-        day: days_1.default.WEDNESDAY,
+        day: weekDay.WEDNESDAY,
         hours: [
             intervals.moorning,
             intervals.afternoon
@@ -48,7 +43,7 @@ let picoYPlacaRules = [
         lastDigitsLicensePlate: digitsPlates.wednesday
     },
     {
-        day: days_1.default.THURSDAY,
+        day: weekDay.THURSDAY,
         hours: [
             intervals.moorning,
             intervals.afternoon
@@ -56,7 +51,7 @@ let picoYPlacaRules = [
         lastDigitsLicensePlate: digitsPlates.thursday
     },
     {
-        day: days_1.default.FRIDAY,
+        day: weekDay.FRIDAY,
         hours: [
             intervals.moorning,
             intervals.afternoon
@@ -64,4 +59,4 @@ let picoYPlacaRules = [
         lastDigitsLicensePlate: digitsPlates.friday
     },
 ];
-exports.default = picoYPlacaRules;
+export default picoYPlacaRules;

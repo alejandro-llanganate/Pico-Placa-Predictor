@@ -1,4 +1,4 @@
-import Validators from "../validators"
+import Validators from "../validators.js"
 
 const validateHour = (hour: string) => {
     if(!Validators.validateTime(hour)){

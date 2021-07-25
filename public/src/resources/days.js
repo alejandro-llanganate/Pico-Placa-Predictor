@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var weekDay;
 (function (weekDay) {
     weekDay[weekDay["MONDAY"] = 1] = "MONDAY";
@@ -10,4 +8,4 @@ var weekDay;
     weekDay[weekDay["SATURDAY"] = 6] = "SATURDAY";
     weekDay[weekDay["SUNDAY"] = 7] = "SUNDAY";
 })(weekDay || (weekDay = {}));
-exports.default = weekDay;
+export default weekDay;

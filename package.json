@@ -26,10 +26,13 @@
   "dependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.0.2",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.0.20",
     "ts-node": "^10.1.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.21",
     "@types/mocha": "^9.0.0"
-  }
+  },
+  "type": "module"
 }

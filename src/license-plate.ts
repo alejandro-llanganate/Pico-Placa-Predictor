@@ -1,4 +1,4 @@
-import Validators from "./validators";
+import Validators from "./validators.js";
 
 class LicensePlate {
     private _provinceLetter?: string;
@@ -9,6 +9,7 @@ class LicensePlate {
         if (Validators.validateEcuadorianLicensePlate(userPlate)) {
             this._fullPlate = userPlate;
             this._provinceLetter = userPlate.charAt(0);
+            console.log(userPlate.charAt(userPlate.length - 1))
             this._lastDigit = parseInt(userPlate.charAt(userPlate.length - 1));
         }
         else{

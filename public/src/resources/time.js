@@ -1,13 +1,8 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const validators_1 = __importDefault(require("../validators"));
+import Validators from "../validators.js";
 const validateHour = (hour) => {
-    if (!validators_1.default.validateTime(hour)) {
+    if (!Validators.validateTime(hour)) {
         throw new Error('Format invalid of hour');
     }
     return hour;
 };
-exports.default = validateHour;
+export default validateHour;

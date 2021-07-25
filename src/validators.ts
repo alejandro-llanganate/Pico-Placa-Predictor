@@ -1,4 +1,4 @@
-import provincesLetters from "./resources/provinces";
+import provincesLetters from "./resources/provinces.js";
 
 class Validators{
 

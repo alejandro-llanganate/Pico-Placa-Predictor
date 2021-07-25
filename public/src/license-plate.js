@@ -1,14 +1,10 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const validators_1 = __importDefault(require("./validators"));
+import Validators from "./validators.js";
 class LicensePlate {
     constructor(userPlate) {
-        if (validators_1.default.validateEcuadorianLicensePlate(userPlate)) {
+        if (Validators.validateEcuadorianLicensePlate(userPlate)) {
             this._fullPlate = userPlate;
             this._provinceLetter = userPlate.charAt(0);
+            console.log(userPlate.charAt(userPlate.length - 1));
             this._lastDigit = parseInt(userPlate.charAt(userPlate.length - 1));
         }
         else {
@@ -25,4 +21,4 @@ class LicensePlate {
         return this._fullPlate;
     }
 }
-exports.default = LicensePlate;
+export default LicensePlate;
