@@ -1,0 +1,36 @@
+{
+  "name": "pico-placa-predictor",
+  "version": "1.0.0",
+  "description": "A TypeScript program to predict if a car can be on the road or not according to the Ecuadorian traffic regulation: Pico & Placa.",
+  "main": "./public/src/app,js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register --watch-extensions ts 'test/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrollanganate/Pico-Placa-Predictor.git"
+  },
+  "keywords": [
+    "pico-&-placa",
+    "predictor"
+  ],
+  "author": "Alejandro Llanganate <luis.llanganate@epn.edu.ec>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejandrollanganate/Pico-Placa-Predictor/issues"
+  },
+  "homepage": "https://github.com/alejandrollanganate/Pico-Placa-Predictor#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.2",
+    "sweetalert": "^2.1.2",
+    "ts-node": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0"
+  }
+}
