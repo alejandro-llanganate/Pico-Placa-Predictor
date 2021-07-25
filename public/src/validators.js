@@ -18,5 +18,17 @@ class Validators {
         }
         return true;
     }
+    static validateTime(time) {
+        const regexFormat = /^[0-2]{1}?[0-9]{1}:[0-9]{1,2}?$/;
+        const validFormat = regexFormat.exec(time);
+        if (!validFormat) {
+            return false;
+        }
+        let hours = parseInt(time.split(':')[0]);
+        if (hours >= 24) {
+            return false;
+        }
+        return true;
+    }
 }
 exports.default = Validators;

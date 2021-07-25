@@ -6,7 +6,7 @@ class Validators{
         const regexFormat : RegExp = /^[A-Z]{3,3}\-[0-9]{3,4}$/;
         const validFormat = regexFormat.exec(plateNumber);
         if(!validFormat){
-            return false
+            return false;
         }
         const firstLetter = plateNumber.charAt(0);
         const firstLetterCorrect = Object.keys(provincesLetters).find((letter) => letter === firstLetter)
@@ -14,6 +14,20 @@ class Validators{
             return false;
         }
         return true;
+    }
+
+    static validateTime(time: string){
+        const regexFormat : RegExp = /^[0-2]{1}?[0-9]{1}:[0-9]{1,2}?$/;
+        const validFormat = regexFormat.exec(time);
+        if(!validFormat){
+            return false;
+        }
+        let hours = parseInt(time.split(':')[0]);
+        if(hours >= 24){
+            return false;
+        }
+        return true;
+
     }
 }
 

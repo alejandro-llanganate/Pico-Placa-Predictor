@@ -1,8 +1,8 @@
 import weekDay from "./resources/days";
 
 type hourRestriction = {
-    initialHour: Date,
-    finalHour: Date
+    initialHour: string,
+    finalHour: string
 }
 
 interface CarCirculationRule {

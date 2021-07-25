@@ -1,5 +1,6 @@
-import LicensePlate from '../src/license-plate';
 import { expect, assert } from 'chai'
+import LicensePlate from '../src/license-plate';
+
 
 describe('LicensePlate', () => {
     it('Should throw an error when trying to create an instance with a incorrect format license plate', () => {

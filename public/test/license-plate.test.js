@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const license_plate_1 = __importDefault(require("../src/license-plate"));
 const chai_1 = require("chai");
+const license_plate_1 = __importDefault(require("../src/license-plate"));
 describe('LicensePlate', () => {
     it('Should throw an error when trying to create an instance with a incorrect format license plate', () => {
         chai_1.assert.throw(() => { new license_plate_1.default('PTOO-0168'); }, Error);

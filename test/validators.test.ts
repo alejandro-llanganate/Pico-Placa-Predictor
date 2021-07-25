@@ -33,4 +33,23 @@ describe('Validators.validateEcuadorianLicensePlate()', () => {
     )
 });
 
+describe('Validators.validateTime()', () => {
+    it('Should return true for a correct time format', () => {
+        const time1 = "14:12";
+        expect(Validators.validateTime(time1)).to.equal(true)
 
+    }
+    )
+
+    it('Should return false for a incorrect time format', () => {
+        const time = "29:12";
+        expect(Validators.validateTime(time)).to.equal(false)
+    }
+    )
+
+    it('Should return false for a empty string', () => {
+        const time = "";
+        expect(Validators.validateTime(time)).to.equal(false)
+    }
+    )
+});

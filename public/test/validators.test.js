@@ -27,3 +27,17 @@ describe('Validators.validateEcuadorianLicensePlate()', () => {
         chai_1.expect(validators_1.default.validateEcuadorianLicensePlate(plateNumber)).to.equal(false);
     });
 });
+describe('Validators.validateTime()', () => {
+    it('Should return true for a correct time format', () => {
+        const time1 = "14:12";
+        chai_1.expect(validators_1.default.validateTime(time1)).to.equal(true);
+    });
+    it('Should return false for a incorrect time format', () => {
+        const time = "29:12";
+        chai_1.expect(validators_1.default.validateTime(time)).to.equal(false);
+    });
+    it('Should return false for a empty string', () => {
+        const time = "";
+        chai_1.expect(validators_1.default.validateTime(time)).to.equal(false);
+    });
+});
