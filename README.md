@@ -1,7 +1,7 @@
 # Pico & Placa - Predictor
 A TypeScript webb app to predict if a car can be on the road or not according to the Ecuadorian traffic regulation: Pico &amp; Placa.
 
-Try the application in: https://alejandrollanganate.github.io/Pico-Placa-Predictor/public/index.html
+You can review this web application in: https://alejandrollanganate.github.io/Pico-Placa-Predictor/public/index.html
 
 ### Pico & Placa Rules
 
