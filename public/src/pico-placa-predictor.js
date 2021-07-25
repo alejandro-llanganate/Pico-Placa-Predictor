@@ -7,11 +7,11 @@ class PicoPlacaPredictor {
     }
     isAuthorizedToCirculate(date, hour) {
         const dayNumber = date.getDay() + 1;
+        console.log("dayNumber", dayNumber);
         let resultRule = this._rules.find(restriction => restriction.day === dayNumber);
         if (!resultRule) {
             return true;
         }
-        console.log(resultRule);
         let resultPlateDigit = resultRule.lastDigitsLicensePlate.find(digit => digit === this._licensePlate.lastDigit);
         if (!resultPlateDigit) {
             return true;
@@ -33,3 +33,4 @@ class PicoPlacaPredictor {
         this._rules.push(rule);
     }
 }
+exports.default = PicoPlacaPredictor;
