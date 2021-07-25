@@ -38,7 +38,7 @@ In public folder open in a browser the file `index.html` you can either do this 
   
 ## Running Tests
 
-To run the 16 tests in this proyect, pleas run the command:
+To run the 16 tests in this proyect, you can run the command:
 
 ```bash
   npm test
