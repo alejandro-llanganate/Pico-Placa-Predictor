@@ -1,8 +1,18 @@
 # Pico & Placa - Predictor
-A TypeScript program to predict if a car can be on the road or not according to the Ecuadorian traffic regulation: Pico &amp; Placa.
+A TypeScript webb app to predict if a car can be on the road or not according to the Ecuadorian traffic regulation: Pico &amp; Placa.
 
-https://alejandrollanganate.github.io/Pico-Placa-Predictor/public/index.html
+Try the application in: https://alejandrollanganate.github.io/Pico-Placa-Predictor/public/index.html
 
+### Pico & Placa Rules
+
+**Hours:** 7:00am - 9:30 am / 16:00pm -19:30pm
+
+*Restrictions according the last digit of a license plate:*
+Monday |  Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday | 
+--- | --- | --- | --- |--- |--- |--- |
+1-2 | 3-4 | 5-6 | 7-8 | 9-0 | not apply |not apply | 
+
+**Example of the format of an ecuadorian license plate:** ABC-123 or ABC-1234
 
 ## Installation
 
