@@ -1,7 +1,7 @@
 import Validators from "../src/validators";
 import { expect } from 'chai'
 
-describe('Validators.validateEcuadorianLicensePlate', () => {
+describe('Validators.validateEcuadorianLicensePlate()', () => {
     it('Should return true for a correct ecuadorian license plate of 3 letters and 3 numbers', () => {
         const plateNumber = "ABC-123";
         expect(Validators.validateEcuadorianLicensePlate(plateNumber)).to.equal(true)

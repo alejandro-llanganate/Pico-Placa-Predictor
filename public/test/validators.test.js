@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const validators_1 = __importDefault(require("../src/validators"));
 const chai_1 = require("chai");
-describe('Validators.validateEcuadorianLicensePlate', () => {
+describe('Validators.validateEcuadorianLicensePlate()', () => {
     it('Should return true for a correct ecuadorian license plate of 3 letters and 3 numbers', () => {
         const plateNumber = "ABC-123";
         chai_1.expect(validators_1.default.validateEcuadorianLicensePlate(plateNumber)).to.equal(true);
